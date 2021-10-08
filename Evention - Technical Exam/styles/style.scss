@@ -1,0 +1,31 @@
+// Variables
+$primary-color: white;
+$secondary-color: #009bc4;
+$radius: 50%;
+$height: 100vh;
+$h1: 8.7rem;
+$h2: 4rem;
+$h3-button: 2.6rem;
+$h3: 2.6rem;
+$h4: 1.2rem;
+$p: 1.8rem;
+$poppins-regular: Poppins Regular;
+$poppins-semibold: Poppins SemiBold;
+$poppins-bold: Poppins Bold;
+$poppins-black: Poppins Black;
+
+@mixin flex($direction, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+}
+
+// Imports
+@import "global";
+@import "fonts";
+@import "hero";
+@import "choose";
+@import "events";
+@import "clientele";
+@import "footer";

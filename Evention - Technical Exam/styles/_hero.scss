@@ -1,0 +1,89 @@
+.hero {
+  min-height: $height;
+  background: url(/imgs/landing-bg.jpg);
+  object-fit: cover;
+  background-position: center;
+
+  &-nav {
+    width: 95%;
+    transform: translateY(50%);
+    margin: auto;
+  }
+
+  &-nav > ul {
+    @include flex(row, space-between);
+    flex-wrap: wrap;
+  }
+
+  &-enquire {
+    @include flex("", "");
+    justify-content: flex-end;
+    min-height: 10vh;
+  }
+
+  &-enquire img {
+    height: 6rem;
+    width: 6rem;
+    object-fit: fit;
+    margin-left: 4rem;
+  }
+  &-enquire button {
+    padding: 1rem 5rem;
+    color: $primary-color;
+  }
+
+  &-content {
+    // @include flex(column, space-around);
+    color: $primary-color;
+  }
+}
+
+.hero-content {
+  min-height: 90vh;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: $primary-color;
+    font-size: $h1;
+    font-family: Poppins Black;
+    line-height: 10.5rem;
+    margin: 3rem 0;
+  }
+
+  button {
+    color: $primary-color;
+    padding: 1.5rem 5rem;
+    font-size: $h3-button;
+  }
+}
+
+@media screen and (max-width: 963px) {
+  .hero-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h1 {
+    color: $primary-color;
+    font-size: calc(3.5rem + 1vh);
+    font-family: Poppins Black;
+    line-height: 4.5rem;
+    margin: 3rem 0;
+  }
+  .hero-nav button {
+    max-height: 50%;
+  }
+
+  .hero-content {
+    transform: translateY(-10%);
+  }
+
+  .hero-content button {
+    padding: 1rem 3rem;
+    font-size: $h3;
+  }
+}

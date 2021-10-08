@@ -1,0 +1,194 @@
+footer {
+  min-height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  font-size: $p;
+}
+
+.about-evention-left {
+  height: 60vh;
+  grid-column: 1/5;
+  grid-row: 1/3;
+  background-color: #116281;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    align-self: flex-start;
+  }
+}
+
+.about-evention-right {
+  grid-column: 3/8;
+  grid-row: 1/3;
+}
+
+.form-evention {
+  min-height: 42vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  transform: translateX(35%);
+  // background-color: rgb(146, 146, 146);
+}
+
+.about-evention-left h3 {
+  font-size: $h2;
+  color: $primary-color;
+  margin: 2rem 5rem;
+}
+.about-evention-left p {
+  color: $primary-color;
+  margin: 0 5rem;
+  margin-right: 9rem;
+}
+
+.form-content {
+  margin: 0 5rem;
+}
+.form-content-contact,
+.form-content-email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.form-content-contact p,
+.form-content-email p {
+  margin: 0 1.5rem;
+}
+
+.form-content h3 {
+  font-size: $h2;
+}
+
+.form-name {
+  grid-area: form1;
+}
+
+.form-email {
+  grid-area: form2;
+}
+
+.form-phone {
+  grid-area: form3;
+}
+
+.form-textarea {
+  grid-area: form4;
+}
+
+.form-footer {
+  grid-area: form5;
+}
+
+.form {
+  width: 70vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 8vh 8vh 17vh 8vh;
+  grid-template-areas:
+    "form1 form1 form2 form2"
+    "form3 form3 form3 form3"
+    "form4 form4 form4 form4"
+    "form5 form5 form5 form5 ";
+  grid-gap: 2rem;
+
+  input {
+    height: 100%;
+    width: 100%;
+    border: solid 1px #116281;
+    border-radius: 6px;
+    position: relative;
+  }
+  ::placeholder {
+    font-family: Lato Regular;
+  }
+}
+
+.captcha {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    color: white;
+    padding: 2rem 6rem;
+    border-radius: 3px;
+    margin-right: 12rem;
+  }
+}
+@media screen and (max-width: 1715px) {
+  footer {
+    display: grid;
+
+    margin: 0;
+  }
+  .about-evention-left {
+    height: 30vh;
+    grid-column: 1/10;
+    grid-row: 1/3;
+    background-color: #116281;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      align-self: flex-start;
+      margin: 0 5rem;
+    }
+
+    p {
+      margin: 0 5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .about-evention-right {
+    grid-column: 1/10;
+    grid-row: 3;
+  }
+
+  .form-evention {
+    display: flex;
+    margin: 2rem 0;
+    transform: translateX(0);
+  }
+
+  .form-content {
+    margin-right: 0 80rem;
+    flex: 1 1 40rem;
+  }
+
+  .form {
+    flex: 1 1 40rem;
+    transform: translateX(-30%);
+  }
+  button {
+    margin: 3rem;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .form-evention {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form {
+    margin: -10rem;
+    transform: translateX(0%);
+  }
+  button {
+    margin: 2rem;
+  }
+}

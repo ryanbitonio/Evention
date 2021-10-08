@@ -1,0 +1,54 @@
+.clientele {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  h3 {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    color: $secondary-color;
+    font-size: $h2;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    mix-blend-mode: multiply;
+    image-resolution: 72dpi;
+    object-fit: cover;
+  }
+}
+
+.slider {
+  margin: 10rem 0;
+}
+
+.clientele-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1624px) {
+  .clientele {
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h3 {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .clientele-top,
+  .clientele-bottom {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
